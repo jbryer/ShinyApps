@@ -15,7 +15,7 @@ runApp('gambler')
 runApp('lottery')
 
 # Run from Github
-shiny::runGitHub('ShinyApps', 'jbyrer', subdir='gambler')
+shiny::runGitHub('ShinyApps', 'jbryer', subdir='gambler')
 shiny::runGitHub('ShinyApps', 'jbryer', subdir='lottery')
 
 # Run from Gist

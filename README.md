@@ -6,10 +6,10 @@ This repository hosts some [Shiny](http://rstudio.com/shiny) apps I have develop
 
 	![Gambler Shiny App](screens/gambler-small.png)
 
-		shiny::runGitHub('ShinyApps', 'jbyrer', subdir='gambler')
+		shiny::runGitHub('ShinyApps', 'jbryer', subdir='gambler')
 
 * `lottery` - Similar to the `gambler` app, this simulates buying a series of lottery tickets with varying odds of winning different amounts. Each previous run is saved and plotted in light grey to show how the current run compares to past runs.
 
 	![Lottery Tickets Shiny App](screens/lottery-small.png)
 	
-		shiny::runGitHub('ShinyApps', 'jbyrer', subdir='lottery')
+		shiny::runGitHub('ShinyApps', 'jbryer', subdir='lottery')
