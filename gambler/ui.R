@@ -37,4 +37,3 @@ shinyUI(pageWithSidebar(
 		)
 	)
 ))
-

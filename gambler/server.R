@@ -43,4 +43,3 @@ shinyServer(function(input, output) {
 			   input$games, ' games is ', prettyNum(abs(total), digits=1)))
 	})
 })
-
