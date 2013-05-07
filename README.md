@@ -6,10 +6,18 @@ This repository hosts some [Shiny](http://rstudio.com/shiny) apps I have develop
 
 	![Gambler Shiny App](screens/gambler-small.png)
 
+	To run the app locally:
+	
 		shiny::runGitHub('ShinyApps', 'jbryer', subdir='gambler')
 
+	Or from the [RStudio server](http://spark.rstudio.com/jbryer/gambler) (note that RStudio does not guarantee the server will always be up so this link may or may not work).
+	
 * `lottery` - Similar to the `gambler` app, this simulates buying a series of lottery tickets with varying odds of winning different amounts. Each previous run is saved and plotted in light grey to show how the current run compares to past runs.
 
 	![Lottery Tickets Shiny App](screens/lottery-small.png)
 	
+	To run the app locally:
+	
 		shiny::runGitHub('ShinyApps', 'jbryer', subdir='lottery')
+
+	Or from the [RStudio server](http://spark.rstudio.com/jbryer/lottery) (note that RStudio does not guarantee the server will always be up so this link may or may not work).
