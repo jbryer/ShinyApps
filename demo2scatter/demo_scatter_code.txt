@@ -1,0 +1,54 @@
+# Demo of Shiny app for ggplot2 Scatterplots
+# code for ui.R:
+require(shiny)
+# Define UI Scatterplot Graph View
+shinyUI(pageWithSidebar(
+  # Application title
+  headerPanel("Bivariate Scatterplot"),
+  sidebarPanel(
+    helpText("Choose an alternative plot type and then press Update View"),
+    radioButtons("xy", "Scatterplot type:",
+                 list("Basic with points" = "base",
+                      "Points plus 2D contours" = "contour",
+                      "Rasterized 2D Density" = "raster1",
+                      "Points plus Rasterized 2D Density" = "raster2",
+                      "Points plus tiled 2D Density" = "tile")),
+    submitButton("Update View"),
+    br(),
+    helpText("Note: These graphs are produced with the ggplot2 package in R")
+    ),
+  mainPanel(
+    h3("Old Faithful Geyser Data Set"),
+    h4("Eruption Duration (eruptions) vs Eruption Interval (waiting)"),
+    plotOutput("scatter")
+  )
+))
+# code for server.R:
+library(shiny)
+library(datasets)
+require(ggplot2)
+# Define server logic required create and view the plot
+shinyServer(function(input, output) {
+  # use Old Faithful Data set
+  data(faithful)
+  output$scatter <- renderPlot({
+    #create base graph entity wthout displaying anything
+    pbase <- ggplot(faithful, aes(x=waiting,y=eruptions))
+    #display the scatterplot with the data points
+    if(input$xy == "base")
+      print(pbase + geom_point())
+    if(input$xy == "contour")
+      print(pbase + geom_point() + stat_density2d(col="skyblue"))
+    if(input$xy == "raster1")
+      print(pbase 
+            + stat_density2d(aes(fill=..density..), geom="raster",contour=FALSE))
+    if(input$xy == "raster2")
+      print(pbase 
+            + stat_density2d(aes(fill=..density..), geom="raster",contour=FALSE)
+            + geom_point(colour="gold",size=1))
+    if(input$xy == "tile")
+      print(pbase + geom_point() +
+              stat_density2d(aes(alpha=..density..), geom="tile",contour=FALSE))
+  },height=500,width=500)
+ })
+ 
