@@ -64,7 +64,7 @@ shinyServer(function(input, output) {
 			geom_line(data=mydata, aes(x=x, y=y)) + 
 			geom_point(data=mydata[mydata$Value > 0,], 
 					   aes(x=x,y=y,color=paste0('$', (Value+1))),
-					   size=2, vjust=-1) +
+					   size=2) +
 			scale_color_brewer('Winnning Value', labels=tickets$Winnings,
 							   breaks=tickets$Winnings, palette='Dark2') +
 			ylim(range) +

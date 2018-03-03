@@ -1,3 +1,10 @@
+#### Open Data Day 2018
+
+Materials for brief workshop, Introduction to Shiny, given at the [Open Data Day](http://opendataalbany.org/) event on March 3, 2018.
+
+* [Slides](Slides/2018-03-01-IntroShiny.key)
+* [ShinyExamples.R](R script to run some Shiny apps)
+
 #### Shiny Apps
 
 This repository hosts some [Shiny](http://rstudio.com/shiny) apps I have developed. The [`run.R`](https://github.com/jbryer/ShinyApps/blob/master/run.R) script can be used to get started.
