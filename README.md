@@ -3,7 +3,7 @@
 Materials for brief workshop, Introduction to Shiny, given at the [Open Data Day](http://opendataalbany.org/) event on March 3, 2018.
 
 * [Slides](Slides/2018-03-01-IntroShiny.key)
-* [ShinyExamples.R](R script to run some Shiny apps)
+* [R script to run some Shiny apps](ShinyExamples.R)
 
 ## Shiny Apps
 
